@@ -18,4 +18,12 @@ interface UserDataService : CrudDataService<User, UUID> {
      * @throws NotFoundException if no user has [loginName]
      */
     fun getByLoginName(loginName: String): User
+
+    /**
+     * Returns the user with [id] and locks the row until the transaction ends.
+     *
+     * @param id the id of the user
+     * @return the locked user
+     */
+    fun getByIdForUpdate(id: UUID): User
 }

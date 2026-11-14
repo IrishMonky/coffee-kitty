@@ -2,6 +2,7 @@ package de.seuhd.campuscoffee.data.persistence.entities
 
 import jakarta.persistence.Column
 import jakarta.persistence.Table
+import java.math.BigDecimal
 
 /**
  * JPA entity of a user. The companion object holds the names of the unique constraints that the migration
@@ -21,6 +22,9 @@ class UserEntity : Entity() {
 
     @field:Column(name = "last_name")
     var lastName: String? = null
+
+    @Column(name = "balance", nullable = false, precision = 10, scale = 2)
+    var balance: BigDecimal = BigDecimal("0.00")
 
     companion object {
         /** Name of the unique constraint on the login name. */
