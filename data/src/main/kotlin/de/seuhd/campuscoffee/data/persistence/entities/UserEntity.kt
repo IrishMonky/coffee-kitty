@@ -26,6 +26,9 @@ class UserEntity : Entity() {
     @Column(name = "balance", nullable = false, precision = 10, scale = 2)
     var balance: BigDecimal = BigDecimal("0.00")
 
+    @Column(name = "is_admin", nullable = false)
+    var admin: Boolean = false
+
     companion object {
         /** Name of the unique constraint on the login name. */
         const val LOGIN_NAME_UNIQUE_CONSTRAINT = "uq_users_login_name"

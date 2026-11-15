@@ -14,31 +14,36 @@ object TestFixtures {
                 loginName = "jane_doe",
                 emailAddress = "jane.doe@se.uni-heidelberg.de",
                 firstName = "Jane",
-                lastName = "Doe"
+                lastName = "Doe",
+                admin = true
             ),
             User(
                 loginName = "maxmustermann",
                 emailAddress = "max.mustermann@se.uni-heidelberg.de",
                 firstName = "Max",
-                lastName = "Mustermann"
+                lastName = "Mustermann",
+                admin = false
             ),
             User(
                 loginName = "student2023",
                 emailAddress = "student2023@se.uni-heidelberg.de",
                 firstName = "Student",
-                lastName = "Example"
+                lastName = "Example",
+                admin = false
             ),
             User(
                 loginName = "lisa_lee",
                 emailAddress = "lisa.lee@se.uni-heidelberg.de",
                 firstName = "Lisa",
-                lastName = "Lee"
+                lastName = "Lee",
+                admin = false
             ),
             User(
                 loginName = "olivia_lee",
                 emailAddress = "olivia.lee@se.uni-heidelberg.de",
                 firstName = "Olivia",
-                lastName = "Lee"
+                lastName = "Lee",
+                admin = false
             )
         )
 

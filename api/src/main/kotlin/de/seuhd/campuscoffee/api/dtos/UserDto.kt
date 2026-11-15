@@ -53,5 +53,6 @@ data class UserDto(
     @field:Size(max = User.MAX_NAME_LENGTH, message = "must have at most {max} characters")
     val lastName: String?,
     @field:Schema(accessMode = Schema.AccessMode.READ_ONLY, description = "Current balance of the user in euros.")
-    val balance: BigDecimal = BigDecimal("0.00")
+    val balance: BigDecimal = BigDecimal("0.00"),
+    val admin: Boolean = false
 ) : Dto<UUID>

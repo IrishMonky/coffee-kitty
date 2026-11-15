@@ -21,7 +21,8 @@ data class User(
     val emailAddress: String,
     val firstName: String,
     val lastName: String,
-    val balance: BigDecimal = BigDecimal("0.00")
+    val balance: BigDecimal = BigDecimal("0.00"),
+    val admin: Boolean = false
 ) : DomainModel<UUID> {
     /** The limits that every new user must meet. */
     companion object {
